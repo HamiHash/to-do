@@ -1,23 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import List from "./components/Items/List";
+import NewItem from "./components/NewItem/NewItem";
+import styles from "./App.module.css";
+
+const DUMMY_ITEMS = [
+  {
+    id: "e1",
+    text: "Listen to music",
+  },
+  {
+    id: "e2",
+    text: "Watch Netflix",
+  },
+  {
+    id: "e3",
+    text: "Play game",
+  },
+  {
+    id: "e4",
+    text: "Walk the dog",
+  },
+];
 
 function App() {
+  const [curItems, changeItem] = useState([
+    {
+      id: "e1",
+      text: "Listen to music",
+    },
+    {
+      id: "e2",
+      text: "Watch Netflix",
+    },
+    {
+      id: "e3",
+      text: "Play game",
+    },
+    {
+      id: "e4",
+      text: "Walk the dog",
+    },
+  ]);
+
+  const addNewItemHandler = (data) => {
+    changeItem((prevItems) => {
+      const updated = [data, ...prevItems];
+      return updated;
+    });
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NewItem onAddNewItem={addNewItemHandler} />
+      <List items={curItems} />
     </div>
   );
 }

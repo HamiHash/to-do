@@ -1,13 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;500;600&display=swap");
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Dosis", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fffdfb;
+  /* font-size: 10px; */
+  /* Percentahe of usre's browser font-size setting: */
+  /* font-size: 62.5%; */
+  /* Why 62.5? ==> 10px / 16px = 0.625 = 62.5% */
+  /* so  1rem is uqual to 10px in a responsive way to users font-size*/
+  overflow-x: hidden;
+
+  /* this will not work in safari and edge*/
+  /* scroll-behavior: smooth; */
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
