@@ -13,7 +13,13 @@ body {
 }
 
 html {
-  background-color: #fffdfb;
+  background-image: radial-gradient(
+    circle 610px at 5.2% 51.6%,
+    rgba(5, 8, 114, 1) 0%,
+    rgba(7, 3, 53, 1) 97.5%
+  );
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   /* font-size: 10px; */
   /* Percentahe of usre's browser font-size setting: */
   /* font-size: 62.5%; */

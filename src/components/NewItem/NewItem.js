@@ -20,9 +20,13 @@ function NewItem(props) {
     }
 
     const data = {
-      text: userInput.describe,
+      text: userInput,
       id: Math.random().toString(),
     };
+
+    //clear inputs
+    setUserInput("");
+
     return props.onAddNewItem(data);
   };
 

@@ -13,9 +13,13 @@
   height: 2.4rem;
   font-size: inherit;
   font-family: inherit;
-  background-color: transparent;
+  background-image: linear-gradient(
+    174.2deg,
+    rgba(255, 244, 228, 1) 7.1%,
+    rgba(240, 246, 238, 1) 67.4%
+  );
   border-radius: 0.5rem;
-  border: solid #999 1.5px;
+  border: none;
   transition: all 0.5s;
 }
 
@@ -23,13 +27,17 @@
   padding: 1rem;
   outline: none;
   border-color: #fdedd5;
-  box-shadow: 0 0 10px 5px rgb(254, 238, 212);
+  box-shadow: 0 0 10px 1.5px #fdedd5;
   background-color: rgba(255, 244, 228, 0.228);
 }
 
 .formContainer button {
-  border: solid 2px #fef2e2;
-  background-color: #fef2e2;
+  border: none;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(97, 186, 255, 1) 0%,
+    rgba(166, 239, 253, 1) 90.1%
+  );
   font-family: inherit;
   font-weight: 600;
   font-size: larger;
@@ -38,9 +46,4 @@
   padding: 0.25rem;
   width: 20%;
   height: 2.2rem;
-}
-
-.formcontainer button:hover {
-  box-shadow: 0 0 10px 5px rgb(255, 244, 228);
-  transition: all 0.8s;
 }
